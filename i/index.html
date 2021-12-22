@@ -1,0 +1,56 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+    {% include frontpage/head.html %}
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    {% include _navigation.html %}
+
+    <!-- Header -->
+    <div class="intro-header">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>You've been invited to ChatSecure!</h1>
+                        <h2 id="invite_sender"></h2>
+                        <script type="text/javascript">
+                        var hash = window.location.hash.substr(1);
+                        var username = atob(hash).split('?')[0];
+                        if (hash.length > 0) {
+                             document.getElementById("invite_sender").innerHTML = "Your friend <a href=xmpp:" + username + ">" + username + "</a> wants to chat with you.";
+                        }
+                        </script>
+                        <h3>Download ChatSecure for iOS</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline app-download-buttons">
+                            <li>
+                                <a href="https://itunes.apple.com/us/app/chatsecure/id464200063"><img src="/images/appstore.svg" height="40px" alt="ChatSecure on iOS App Store"></a>
+                            </li>
+                        </ul>
+                        <hr class="intro-divider">
+                        {% include frontpage/social_buttons.html list_class="intro-social-buttons" %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    {% include _bottom_frontpage.html %}
+
+</body>
+
+</html>
