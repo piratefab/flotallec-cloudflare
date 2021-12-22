@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
-gem 'jekyll-assets'
-gem 'rake'
-gem 'sass'
-gem 'uglifier'
-gem 'github-pages'
+gem 'github-pages', group: :jekyll_plugins
+gem 'jekyll-paginate', group: :jekyll_plugins
+gem 'kramdown', group: :jekyll_plugins
+gem 'RedCloth', group: :jekyll_plugins

@@ -1,65 +1,98 @@
-url: https://flotallec-cloudflare.pages.dev/
-baseurl: /_site/
+inc:
+  # Blog Information
+  title:        "ChatSecure"
+  subtitle:     "Free and open source encrypted chat for iOS."
+  cover_image:  blog-cover.jpg
+  logo:         logo.png
 
-# Site settings
-title: FloTallec
-email: ft@flotallec.com
-description: "A page."
+  # Company information
+  company:      ChatSecure
+  facebook:     chatsecure
+  twitter:      chatsecure
+  github:       chatsecure
+  gplus:        
+
+  # Comments
+  disqus:
+    # Eg. "exampleblog" Set to false to disable comments
+    shortname:  false
+
+  # Sharing settings
+  sharing:
+    twitter:    true
+    facebook:   true
+    gplus:      true
+    hn:         true
 
 
-# Team names, titles and social links
-#people:
-#- name: Kay Garland
-#  pic: 1
-#  position: Lead Designer
-#  social:
-#    - title: twitter
-##      url: #
- #   - title: facebook
-#      url: #
-#    - title: stack-overflow
-#      url: #
+ # Analytics     
+  analytics:
+    google: 
+      id:       UA-28188864-2
+      domain:   chatsecure.org
 
-#- name: Larry Parker
-#  pic: 2
-#  position: Lead Marketer
-#  social:
-#    - title: twitter
-#      url: #
-##    - title: facebook
- #     url: #
- #   - title: linkedin
- #     url: #
 
-#- name: Diana Petersen
-#  pic: 3
-#  position: Lead Developer
-#  social:
-#    - title: twitter
-#      url: #
-#    - title: facebook
-#      url: #
-#    - title: google-plus
-#      url: #
+  # Google Fonts
+  # eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
+  google_font: 'Droid+Sans:400,700'
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-#social:
-#  - title: twitter
-#    url: http://twitter.com/jekyllrb
-#  - title: facebook
-#    url:
-##  - title: stack-overflow
- #   url: http://stackoverflow.com/questions/tagged/jekyll
-#  - title: bitbucket 
-#    url: http://bitbucket.org/jekyll
-#  - title: github
-#    url: http://github.com/jekyll
+  # Setup your fonts, colors etc at _assets/stylesheets/main.scss
 
-# Postal address (add as many lines as necessary)#
-#address:
-#  - line: 3481 Melrose Place
-#  - line: Beverly Hills, CA 90210
+url:         https://chatsecure.org
+description: Free and open source encrypted chat for iOS.
+source:      .
+destination: ./_site
+plugins_dir:     ./_plugins
+layouts_dir:     ./_layouts
+include:     ['.htaccess']
+exclude:     ['node_modules', 'Gemfile', 'Gemfile.lock', 'Gruntfile.js', 'LICENSE', 'package.json', 'deploy.sh']
+timezone:    America/Los_Angeles
+encoding:    UTF-8
+gems: ['jekyll-paginate', 'kramdown', 'RedCloth']
 
-# Build settings
-markdown: kramdown
-permalink: pretty
+# Show future posts
+future:      false
+show_drafts: nil
+limit_posts: 0
+highlighter: rouge
+
+permalink:     /:categories/:title/
+paginate_path: 'blog/page:num'
+paginate: 5
+
+markdown:      kramdown
+markdown_ext:  markdown,mkd,mkdn,md
+textile_ext:   textile
+
+excerpt_separator: "<!-- more -->"
+
+safe:        true
+host:        0.0.0.0
+port:        4000
+baseurl:     /
+lsi:         false
+
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+  syntax_highlighter_opts:
+    wrap: div
+    ine_numbers: inline
+    line_numbers_start: 1
+    tab_width: 4
+    bold_every: 10
+    css: style
+
+redcloth:
+  hard_breaks: true

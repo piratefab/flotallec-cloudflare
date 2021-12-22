@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "4T8JLQR6GR.com.chrisballinger.ChatSecure",
+                "paths": [ "/i/*" ]
+            }
+        ]
+    }
+}

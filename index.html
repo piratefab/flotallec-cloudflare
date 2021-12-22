@@ -1,21 +1,48 @@
 ---
-layout: default
 ---
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="home">
+<head>
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+    {% include frontpage/head.html %}
+</head>
 
-<!--
-  <h1>Posts</h1>
+<body>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+    <!-- Navigation -->
+    {% include _navigation.html %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
--->
-</div>
+    <!-- Header -->
+    <div class="intro-header">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>ChatSecure</h1>
+                        <h3>Encrypted Messenger for iOS</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline app-download-buttons">
+                            <li>
+                                <a href="https://itunes.apple.com/us/app/chatsecure/id464200063"><img src="images/appstore.svg" height="40px" alt="ChatSecure on iOS App Store"></a>
+                            </li>
+                        </ul>
+                        <hr class="intro-divider">
+                        {% include frontpage/social_buttons.html list_class="intro-social-buttons" %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+ 	{% include _bottom_frontpage.html %}
+
+</body>
+
+</html>
