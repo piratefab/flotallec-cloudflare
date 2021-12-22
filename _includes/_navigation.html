@@ -1,0 +1,19 @@
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/{{ site.inc.logo }}" alt="ChatSecure Logo">
+            </a>
+            <a href="/about" class="home">About</a>
+            <a href="/blog" class="home">Blog</a>
+            <a href="/faq">FAQ</a>
+            <a href="/support">Support</a>
+            <a href="/contribute">Contribute</a>
+            <a href="/developers">Developers</a>
+        </nav>
+        <nav class="tagline">
+            {% if site.inc.tagline %}<span>{{ site.inc.tagline }}</span>{% endif %}
+            <a href="/blog" class="btn btn-outline">Blog</a>
+        </nav>
+    </header>
+</section>
